@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Pertama</title>
+    <style>
+        body {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>My first Javascript</h1>
+
+    <button type="button" onclick="Mywaktu()">Tampilkan Waktu saat ini</button>
+    <p id="waktu"></p>
+    <script>
+        function Mywaktu(){
+            document.getElementById('waktu').innerHTML = Date()
+        }
+
+    </script>
+
+</body>
+</html>
