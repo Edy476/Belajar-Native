@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,9 +15,9 @@
             margin-left: 50px;
             padding: 20px;
         }
-
     </style>
 </head>
+
 <body>
     <h1 id="judul">Javascript mengubah content, value, style </h1>
 
@@ -24,7 +25,7 @@
     <p id="bjm">Banjarmasin adalah kota salah satu ada di kalsel</p>
     <button type="button" onclick="content()">Klik sini mengubah content</button>
     <br> <br>
-    
+
     <!-- value image -->
     <div>
         <img id="emot" src="gambar/emotbiasa.jpg" alt="">
@@ -32,26 +33,38 @@
     <button type="button" onclick="ketawa()"> klik mengubah gambar</button>
 
     <!-- style -->
-     <p id="font" >banjarmasin adalah kota kalimantan selatan</p>
-     <button type="button" onclick="rubah()">klik sini merubah ukuran</button>
+    <p id="font">banjarmasin adalah kota kalimantan selatan</p>
+    <button type="button" onclick="rubah()">klik sini merubah ukuran</button>
     <br>
     <br>
-    <button type="reset">reset disini</button>
+    <button type="button" onclick="resetSemua()">Reset Ke Awal</button>
     <script>
-        function content(){
+        function content() {
             document.getElementById("bjm").innerHTML = " Martapura juga salah satu kota di kalsel";
         }
 
-        function ketawa(){
+        function ketawa() {
             document.getElementById("emot").src = "gambar/ketawa.jpg"
         }
 
-        function rubah(){
+        function rubah() {
             document.getElementById("font").style.fontSize = "30px"
             document.getElementById("bjm").style.fontSize = "30px"
             document.getElementById("judul").style.textAlign = "center";
         }
-        
+        function resetSemua() {
+            // Kembalikan isi teks
+            document.getElementById("bjm").innerHTML = "Banjarmasin adalah kota salah satu ada di kalsel";
+
+            // Kembalikan gambar awal
+            document.getElementById("emot").src = "gambar/emotbiasa.jpg";
+
+            // Kembalikan gaya (style) ke semula
+            document.getElementById("font").style.fontSize = ""; // Mengikuti CSS awal
+            document.getElementById("bjm").style.fontSize = "";
+            document.getElementById("judul").style.textAlign = "left"; // Atau kosongkan ""
+        }
     </script>
 </body>
+
 </html>
