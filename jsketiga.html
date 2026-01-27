@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript ke-3</title>
+    <style>
+        body{
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h2>Program Sederhana Aritmatika</h2>
+    <input type="number" id="angka1"> angka ke-1 <br>  
+    <input type="number" id="angka2"> angka ke-2 <br>
+    <button onclick="tambah()">penjumlahan</button>
+    <button onclick="kurang()">pengurangan</button>
+    <button onclick="kali()">perkalian</button>
+    <button onclick="bagi()">pembagian</button>
+    <p id="output"></p>
+
+    <script>
+        function tambah(){
+            //ambil elemen
+            let elemen1 = document.getElementById("angka1");
+            let elemen2 = document.getElementById("angka2");
+
+            //ambil value dari elemen
+            let angka1 = Number(elemen1.value);
+            let angka2 = Number(elemen2.value);
+
+            //jumlah kan angka yang diinputkan
+            let angka3 = angka1 + angka2;
+            //tampilkan hasil
+            document.getElementById("output").innerHTML = "hasilnya adalah " + angka3;
+        }
+
+        function kurang(){
+            //ambil elemen
+            let elemen1 = document.getElementById("angka1");
+            let elemen2 = document.getElementById("angka2");
+
+            //ambil value dari elemen
+            let angka1 = Number(elemen1.value);
+            let angka2 = Number(elemen2.value);
+
+            //jumlah kan angka yang diinputkan
+            let angka3 = angka1 - angka2;
+            //tampilkan hasil
+            document.getElementById("output").innerHTML = "hasilnya adalah " + angka3;
+        }
+
+        function kali(){
+            //ambil elemen
+            let elemen1 = document.getElementById("angka1");
+            let elemen2 = document.getElementById("angka2");
+
+            //ambil value dari elemen
+            let angka1 = Number(elemen1.value);
+            let angka2 = Number(elemen2.value);
+
+            //jumlah kan angka yang diinputkan
+            let angka3 = angka1 * angka2;
+            //tampilkan hasil
+            document.getElementById("output").innerHTML = "hasilnya adalah " + angka3;
+        }
+        function bagi(){
+            //ambil elemen
+            let elemen1 = document.getElementById("angka1");
+            let elemen2 = document.getElementById("angka2");
+
+            //ambil value dari elemen
+            let angka1 = Number(elemen1.value);
+            let angka2 = Number(elemen2.value);
+
+            //jumlah kan angka yang diinputkan
+            let angka3 = angka1 / angka2;
+            //tampilkan hasil
+            document.getElementById("output").innerHTML = "hasilnya adalah " + angka3;
+        }
+
+
+    </script>
+</html>
