@@ -34,6 +34,13 @@
             let angka3 = angka1 + angka2;
             //tampilkan hasil
             document.getElementById("output").innerHTML = "hasilnya adalah " + angka3;
+
+            //validasi jika angka kosong
+            if (angka1 == 0){
+                document.getElementById("output").innerHTML = "masukkan angka keduanya";
+            } else if (angka2 == 0){
+                document.getElementById("output").innerHTML = "masukkan angka keduanya"
+            }
         }
 
         function kurang(){
@@ -49,6 +56,13 @@
             let angka3 = angka1 - angka2;
             //tampilkan hasil
             document.getElementById("output").innerHTML = "hasilnya adalah " + angka3;
+            
+            //validasi jika angka kosong
+            if (angka1 == 0){
+                document.getElementById("output").innerHTML = "masukkan angka keduanya";
+            } else if (angka2 == 0){
+                document.getElementById("output").innerHTML = "masukkan angka keduanya"
+            }
         }
 
         function kali(){
@@ -64,6 +78,13 @@
             let angka3 = angka1 * angka2;
             //tampilkan hasil
             document.getElementById("output").innerHTML = "hasilnya adalah " + angka3;
+
+            //validasi jika angka kosong
+            if (angka1 == 0){
+                document.getElementById("output").innerHTML = "masukkan angka keduanya";
+            } else if (angka2 == 0){
+                document.getElementById("output").innerHTML = "masukkan angka keduanya"
+            }
         }
         function bagi(){
             //ambil elemen
@@ -78,6 +99,13 @@
             let angka3 = angka1 / angka2;
             //tampilkan hasil
             document.getElementById("output").innerHTML = "hasilnya adalah " + angka3;
+            
+            //validasi jika angka kosong
+            if (angka1 == 0){
+                document.getElementById("output").innerHTML = "masukkan angka keduanya";
+            } else if (angka2 == 0){
+                document.getElementById("output").innerHTML = "masukkan angka keduanya"
+            }
         }
 
 
