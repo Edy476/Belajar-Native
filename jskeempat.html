@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript ke-4</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .judul {
+            text-align: center;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+            margin-top: 50px;
+        }
+
+        input {
+            padding: 10px;
+            width: 200px;
+            border-radius: 5px;
+            box-shadow: lime 0px 0px 10px;
+            border: 1px solid #ccc;
+        }
+
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        button {
+            padding: 5px;
+            width: 100px;
+            background-color: lightgreen;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: lime;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1 class="judul">Program Konversi Sederhana Celcius Ke Fahrenheit</h1>
+    <div class="container">
+        <p>Masukkan Angka Celcius</p>
+        <input type="number" id="elemen">
+
+        <button onclick="Konversi()">Konversi</button>
+
+        <p id="output">Hasil Konversi adalah ....</p>
+    </div>
+
+    <script>
+        function Konversi() {
+            // 1. Ambil elemen input dan output
+            let elemen1 = document.getElementById("elemen");
+            let targetOutput = document.getElementById("output");
+
+            // 2. Ambil nilai angka dari input
+            let angkaCelcius = Number(elemen1.value);
+
+            // 3. Validasi: Jika input kosong, beri peringatan
+            if (elemen1.value === "") {
+                targetOutput.innerHTML = "Masukkan angka dulu ya!";
+                targetOutput.style.color = "red";
+                return;
+            }
+            
+            // 4. Hitung menggunakan rumus Celcius ke Fahrenheit
+            // Rumus: (C * 9/5) + 32
+            let hasil = (angkaCelcius * 9 / 5) + 32;
+            
+            // 5. Tampilkan hasilnya
+            targetOutput.innerHTML = "Hasil Konversi adalah " + hasil + " °F";
+            targetOutput.style.color = "black";
+        }
+    </script>
+</body>
+
+</html>
