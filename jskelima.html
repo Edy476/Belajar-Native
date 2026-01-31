@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript ke-5</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>Object</h1>
+    <p id="output"></p>
+    <p id="output2"></p>
+    <p id="output3"></p>
+
+    <script>
+        //normal object method
+        const biodata = {
+            nama: "Sumanto",
+            umur: 30,
+            asal: "Indo",
+            hobi: "makan",
+        };
+        document.getElementById("output").innerHTML = "Halo nama gua adalah "+ biodata.nama + " " + "(Ini adalah normal Object)"
+
+        //object function method
+        const biodata2 = {
+            namaDepan: "Abdul",
+            namaBelakang: "Kanabawi",
+            umur: 27,
+            hobi: "futsal",
+            fullname: function (){
+                return this.namaDepan + " " + this.namaBelakang;
+            }
+        };
+        document.getElementById("output2").innerHTML = "nama saya adalah " + biodata2.fullname() + " " + "(ini adalah object function method)";
+
+        //object add method
+        const biodata3 = {
+            firstName: "Ohim",
+            lastName: "Gimank",
+            age: "20",
+            Hobi: "Singing",
+        };
+        //add a method
+        biodata3.nama = function(){
+            return this.firstName + " " + this.lastName;
+        }
+
+        document.getElementById("output3").innerHTML = "nama teman saya adalah " + biodata3.nama() + " " + "(ini adalah adding object method)"
+
+    </script>
+</body>
+</html>
