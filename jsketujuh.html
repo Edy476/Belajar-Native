@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Ke-7</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 5;
+        }
+
+        h1 {
+            font-size: 45px;
+        }
+
+        p {
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Array</h1>
+    </header>
+
+    <article>
+        <h3>apa itu array?</h3>
+        <p>Array adalah tipe objek yang dirancang untuk menyimpan kumpulan data. <br>
+            Karakteristik utama dari array JavaScript adalah:
+        </p>
+        <ul>
+            <li><b>Element :</b> Sebuah array adalah daftar nilai, yang dikenal sebagai elemen.</li>
+            <li><b>Terurut :</b> Elemen array diurutkan berdasarkan indeksnya.</li>
+            <li><b>Berbasis Indeks 0 :</b> Elemen pertama berada pada indeks 0, elemen kedua pada indeks 1, dan
+                seterusnya.</li>
+            <li><b>Ukuran Dinamis :</b> Array dapat bertambah besar atau menyusut seiring penambahan atau penghapusan
+                elemen.</li>
+            <li><b>Heterogen :</b> Array dapat menyimpan elemen dengan tipe data yang berbeda (angka, string, objek, dan
+                array lainnya).</li>
+        </ul>
+
+        <h3>Contoh Membuat Array</h3>
+        <p>const array_name = [item1, item2, ...]; <br>
+            const cars = ["Saab", "Volvo", "BMW"]; </p>
+        <br>
+        <p>Bisa juga buat kosong dulu, seperti dibawah ini <br>
+            const cars = []; <br>
+            cars[0]= "Saab"; <br>
+            cars[1]= "Volvo"; <br>
+            cars[2]= "BMW"; <br>
+        </p>
+        <br>
+
+        <b><p>Menggunakan kata kunci JavaScript `new`</b> <br>
+            const cars = new Array("Saab", "Volvo", "BMW");
+        </p>
+
+        <br>
+        <b><p>Cara mengakses array</b> <br>
+            const cars = ["Saab", "Volvo", "BMW"]; <br>
+            document.getElementById("demo").innerHTML = cars[0];
+            
+        </p>
+        <br>
+        <p> <b>Akses Seluruh Array</b> <br>
+            const cars = ["Saab", "Volvo", "BMW"]; <br>
+            document.getElementById("demo").innerHTML = cars;
+
+        </p>
+        <br>
+
+        <b><p>Cara mengubah elemen array</b> <br>
+            const cars = ["Saab", "Volvo", "BMW"]; <br>
+            cars[0] = "Opel"; <br>
+            document.getElementById("demo").innerHTML = cars;
+        </p>
+
+        <br>
+        <p></p>
+
+    </article>
+</body>
+
+</html>
